@@ -1,0 +1,141 @@
+#here are some functions that might get called:
+def dead(why):
+    print(why, "You are dead.  You suck.")
+    exit(0)
+
+def end_boss():
+    print("Congratulations you are amazing.")
+    print("You continue to trudge through the cave. Unilt you come to a tiny door.")
+    print("When you enter the room you hear a tiny buzzing noise that keeps getting louder and louder. 
+    It could be a mosquito or a bee!!")
+
+#Maybe do something fancy with the title here?
+print("Welcome to Adventurer's Choice")
+#Build your character
+print("What is your name, young adventure?")
+name = input(">>>")
+print(f"Your name is {name}. That's a silly name. Who would name you that?")
+input(">>>")
+print("How old are you?")
+age = input(">>>")
+print(f"{age}, that is a magnificent age. I remember when I was {age}. I was just learning to walk and talk then.")
+input(">>>")
+
+#The naming of companions and a call to adventure
+print("""
+You are about to embark on a quest of great urgency.
+You can bring three companions with you.
+Who will you choose?
+""")
+comp_1 = input("Companion 1:")
+comp_2 = input("Companion 2:")
+comp_3 = input("Companion 3:")
+# comp_1, comp_2, comp_3 = companions I am not sure how to do this yet? I'll come back to it. I am sure that there is a way to make it easier.
+
+print(f"Hopefully {comp_1}, {comp_2} and {comp_3} can help you on your journey.That seems like a really good crew to bring with you.")
+print("""
+A girl has been reported missing.
+She was last seen in the Deepe Elm Forest.
+She hasn't been seen for two days now.
+Will you help her parents find her?
+""")
+
+print("yes or no?")
+answer = input(">>> ")
+
+if answer == "yes":
+    print("Onward..")
+
+elif answer == "no":
+    print("""
+Too bad. You don't really have a choice.
+You are going to find that girl whether you like it or not.
+""")
+input(">>>")
+
+#Entrance to the dungeon
+print(f"""
+You walk out of town and towards the forest.
+The sun is intense and feels hot on your skin.
+{comp_1}, {comp_2}, and {comp_3} begin to complain.
+Everyone is hot and thirsty.
+You see a pool of water that seems a little unnatural.
+A bright green bubble forms on the surface and then pops.
+Do you choose to take a drink
+""")
+print("yes or no?")
+drink = input(">>>")
+
+if drink == "yes":
+    print(f"""{comp_1}, kneels down to take a drink.
+    They now has dysentarry and cholera. Yikes""")
+elif drink == "no":
+    print("""
+Yeah that water looks a little gross.
+Good thing you remembered to pack bottled water.
+    """)
+
+input(">>>")
+print("""After walking through the thick bramble,
+you see the entrance to a cave.""")
+print("""
+You enter the cave.
+Hopefully you have remembered a torch.
+You walk forward for a few minutes until you come to a fork in the path.
+To the right you feel a cold wind blow.
+To the left you smell a rotten odor.
+""")
+print("Do you want to go right or left??")
+fork = input(">>>")
+
+if fork == "right":
+    print(f"""
+Suddenly you are falling.
+You manage to catch yourself.
+But {comp_2} is not so lucky.  She snaps both legs in two.
+She starts calling out in agony.
+{comp_1} lands on top of her followed by {comp_3}.
+An ice wizard is standing in the middle of the room.
+    """)
+    print("What will you do?")
+    print("1. Throw your torch at him.")
+    print("2. Run away.")
+    print("3. Tell him a joke.")
+    wizardQ = input(">>>")
+    if wizardQ == "1":
+        print("I'm melting, melting, melting.")
+    elif wizardQ == "2":
+        dead("You are a coward.")
+    elif wizardQ == "3":
+        print("""That's a good one.
+                        Ha.
+                                ha.
+                                            ha.""")
+
+elif fork == "left":
+    print("You enter a room filled with rotting corpses.")
+    print("A deranged necromancer is dancing around the room reanimating corpes.")
+    print("Zombies rise to life and start prancing about.")
+    print("The music grows louder and louder.")
+    input(">>>")
+    print("What will you do?")
+    print("1. Turn his music off.")
+    print("2. Run away.")
+    print("3. Tell him a joke.")
+    wizardQ = input(">>>")
+    if wizardQ == "1":
+        print(""" "Hey. Who turned off my music?" The rooms goes silent
+and the necromancer shrivels into a tiny ball.""")
+        end_boss()
+    elif wizardQ == "2":
+        dead("You are a coward.")
+    elif wizardQ == "3":
+        print("""That's a good one.
+                        Ha.
+                                ha.
+                                            ha.""")
+
+
+
+# else:
+#     print("You stumble around and fall on a knife and die. Good job!")
